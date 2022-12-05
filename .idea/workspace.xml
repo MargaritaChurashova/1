@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba32e74c-3e8a-444d-8068-b6f918c2d30c" name="Changes" comment="window title ready" />
+    <list default="true" id="ba32e74c-3e8a-444d-8068-b6f918c2d30c" name="Changes" comment="window icon ready">
+      <change afterPath="$PROJECT_DIR$/src/main/java/misc/Misc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Application.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,6 +49,11 @@
     "project.structure.side.proportion": "0.2"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\churashovama.24\IdeaProjects\untitled2\src\main\resources" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -55,7 +64,7 @@
       <updated>1669281551115</updated>
       <workItem from="1669281553542" duration="2838000" />
       <workItem from="1669623470570" duration="2728000" />
-      <workItem from="1670228542442" duration="536000" />
+      <workItem from="1670228542442" duration="1726000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1669282509065</created>
@@ -99,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670228711444</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="window icon ready">
+      <created>1670229825356</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1670229825356</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,6 +145,7 @@
     <MESSAGE value="window works" />
     <MESSAGE value="java doc" />
     <MESSAGE value="window title ready" />
-    <option name="LAST_COMMIT_MESSAGE" value="window title ready" />
+    <MESSAGE value="window icon ready" />
+    <option name="LAST_COMMIT_MESSAGE" value="window icon ready" />
   </component>
 </project>
