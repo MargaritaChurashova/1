@@ -6,6 +6,7 @@ import io.github.humbleui.skija.Canvas;
 import io.github.humbleui.skija.Paint;
 import io.github.humbleui.skija.RRect;
 import io.github.humbleui.skija.Surface;
+import misc.CoordinateSystem2i;
 import misc.Misc;
 
 import java.io.File;
@@ -83,43 +84,32 @@ public class Application implements Consumer<Event> {
         if (e instanceof EventWindowClose) {
             // завершаем работу приложения
             App.terminate();
-        }
-        else if (e instanceof EventFrameSkija ee) {
-            // получаем поверхность рисования
-            Surface s = ee.getSurface();
-            // очищаем её канвас заданным цветом
-            paint(s.getCanvas(), s.getWidth(), s.getHeight());;
-        }
-        else if (e instanceof EventWindowCloseRequest) {
+        } else if (e instanceof EventWindowCloseRequest) {
             window.close();
+        } else if (e instanceof EventFrameSkija ee) {
+            Surface s = ee.getSurface();
+            paint(s.getCanvas(), new CoordinateSystem2i(
+                    s.getWidth() / 3, s.getHeight() / 3,
+                    s.getWidth()  / 3,  s.getHeight()  / 3));
         }
     }
     /**
      * Рисование
      *
-     * @param canvas низкоуровневый инструмент рисования примитивов от Skija
-     * @param height высота окна
-     * @param width  ширина окна
+     * @param canvas   низкоуровневый инструмент рисования примитивов от Skija
+     * @param windowCS СК окна
      */
-    public void paint(Canvas canvas, int height, int width) {
+    public void paint(Canvas canvas, CoordinateSystem2i windowCS) {
         // запоминаем изменения (пока что там просто заливка цветом)
         canvas.save();
         // очищаем канвас
         canvas.clear(APP_BACKGROUND_COLOR);
-
-        // координаты левого верхнего края окна
-        int rX = width / 3;
-        int rY = height / 3;
-        // ширина и высота
-        int rWidth = width / 3;
-        int rHeight = height / 3;
         // создаём кисть
         Paint paint = new Paint();
         // задаём цвет рисования
         paint.setColor(Misc.getColor(100, 255, 255, 255));
         // рисуем квадрат
-        canvas.drawRRect(RRect.makeXYWH(rX, rY, rWidth, rHeight, 4), paint);
-
+        canvas.drawRRect(windowCS.getRRect(4), paint);
         // восстанавливаем состояние канваса
         canvas.restore();
     }
