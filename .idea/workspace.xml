@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba32e74c-3e8a-444d-8068-b6f918c2d30c" name="Changes" comment="add setColor()">
+    <list default="true" id="ba32e74c-3e8a-444d-8068-b6f918c2d30c" name="Changes" comment="drawign rect works">
+      <change afterPath="$PROJECT_DIR$/src/main/java/misc/Vector2i.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,6 +65,7 @@
       <workItem from="1669623470570" duration="2728000" />
       <workItem from="1670228542442" duration="2351000" />
       <workItem from="1670232880581" duration="616000" />
+      <workItem from="1670490742461" duration="690000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1669282509065</created>
@@ -128,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670230621261</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="drawign rect works">
+      <created>1670491047834</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1670491047834</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,6 +170,7 @@
     <MESSAGE value="window icon ready" />
     <MESSAGE value="canvas works" />
     <MESSAGE value="add setColor()" />
-    <option name="LAST_COMMIT_MESSAGE" value="add setColor()" />
+    <MESSAGE value="drawign rect works" />
+    <option name="LAST_COMMIT_MESSAGE" value="drawign rect works" />
   </component>
 </project>
