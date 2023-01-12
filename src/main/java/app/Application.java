@@ -1,5 +1,6 @@
 package app;
 
+import controls.Label;
 import io.github.humbleui.jwm.*;
 import io.github.humbleui.jwm.skija.EventFrameSkija;
 import io.github.humbleui.skija.Canvas;
@@ -13,11 +14,17 @@ import java.io.File;
 import java.util.function.Consumer;
 
 import static app.Colors.APP_BACKGROUND_COLOR;
+import static app.Colors.PANEL_BACKGROUND_COLOR;
+import static controls.Label.PANEL_PADDING;
 
 /**
  * Класс окна приложения
  */
 public class Application implements Consumer<Event> {
+    /**
+     * Первый заголовок
+     */
+    private final Label label;
     /**
      * радиус скругления элементов
      */
@@ -30,10 +37,8 @@ public class Application implements Consumer<Event> {
     /**
      * Конструктор окна приложения
      */
-    /**
-     * Конструктор окна приложения
-     */
     public Application() {
+
         // создаём окно
         window = App.makeWindow();
         // задаём обработчиком событий текущий объект
@@ -45,7 +50,7 @@ public class Application implements Consumer<Event> {
         // задаём его положение
         window.setWindowPosition(100, 100);
         // задаём иконку
-
+        label = new Label(window, true, PANEL_BACKGROUND_COLOR, PANEL_PADDING, "Привет, мир!");
         switch (Platform.CURRENT) {
             case WINDOWS -> window.setIcon(new File("src/main/resources/windows.ico"));
             case MACOS -> window.setIcon(new File("src/main/resources/macos.icns"));
@@ -92,9 +97,8 @@ public class Application implements Consumer<Event> {
             window.close();
         } else if (e instanceof EventFrameSkija ee) {
             Surface s = ee.getSurface();
-            paint(s.getCanvas(), new CoordinateSystem2i(
-                    s.getWidth() / 3, s.getHeight() / 3,
-                    s.getWidth()  / 3,  s.getHeight()  / 3));
+            // очищаем её канвас заданным цветом
+            paint(s.getCanvas(), new CoordinateSystem2i(s.getWidth(), s.getHeight()));
         }
     }
     /**
@@ -108,13 +112,11 @@ public class Application implements Consumer<Event> {
         canvas.save();
         // очищаем канвас
         canvas.clear(APP_BACKGROUND_COLOR);
-        // создаём кисть
-        Paint paint = new Paint();
-        // задаём цвет рисования
-        paint.setColor(Misc.getColor(100, 255, 255, 255));
-        // рисуем квадрат
-        canvas.drawRRect(windowCS.getRRect(4), paint);
+        // рисуем заголовок
+        label.paint(canvas, windowCS);
         // восстанавливаем состояние канваса
         canvas.restore();
+        // рисуем заголовок в точке [100,100] с шириной и выостой 200
+        label.paint(canvas, new CoordinateSystem2i(100, 100, 200, 200));
     }
 }

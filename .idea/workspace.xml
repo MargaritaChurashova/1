@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba32e74c-3e8a-444d-8068-b6f918c2d30c" name="Changes" comment="int vector">
-      <change afterPath="$PROJECT_DIR$/src/main/java/panels/Panel.java" afterDir="false" />
+    <list default="true" id="ba32e74c-3e8a-444d-8068-b6f918c2d30c" name="Changes" comment="panel created">
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/Fonts.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controls/Label.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/Colors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Colors.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +42,9 @@
     </option>
   </component>
   <component name="ProjectId" id="2HzIaXRTX4bjqdQb2mZEswhdM1J" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -62,6 +66,13 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="test" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -73,6 +84,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -89,7 +105,7 @@
       <workItem from="1670490742461" duration="1434000" />
       <workItem from="1673515709404" duration="98000" />
       <workItem from="1673515936498" duration="67000" />
-      <workItem from="1673516031333" duration="405000" />
+      <workItem from="1673516031333" duration="1473000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1669282509065</created>
@@ -168,7 +184,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670491441962</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="panel created">
+      <created>1673516543320</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1673516543320</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,6 +226,7 @@
     <MESSAGE value="add setColor()" />
     <MESSAGE value="drawign rect works" />
     <MESSAGE value="int vector" />
-    <option name="LAST_COMMIT_MESSAGE" value="int vector" />
+    <MESSAGE value="panel created" />
+    <option name="LAST_COMMIT_MESSAGE" value="panel created" />
   </component>
 </project>
