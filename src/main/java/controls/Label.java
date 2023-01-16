@@ -16,6 +16,14 @@ import static app.Fonts.FONT12;
  */
 public class Label extends Panel {
     /**
+     * Флаг, нужно ли выравнивать текст по центру по горизонтали
+     */
+    protected boolean centered;
+    /**
+     * Флаг, нужно ли выравнивать текст по центру по вертикали
+     */
+    protected boolean vcentered;
+    /**
      * отступы панелей
      */
     public static final int PANEL_PADDING = 5;
@@ -32,13 +40,18 @@ public class Label extends Panel {
      * @param backgroundColor цвет подложки
      * @param padding         отступы
      * @param text            текст
+     * @param centered        флаг, нужно ли выравнивать текст по центру по горизонтали
+     * @param vcentered       флаг, нужно ли выравнивать текст по центру по вертикали
      */
-    public Label(Window window, boolean drawBG, int backgroundColor, int padding, String text) {
+    public Label(Window window, boolean drawBG, int backgroundColor, int padding, String text,
+                 boolean centered, boolean vcentered) {
         super(window, drawBG, backgroundColor, padding);
         this.text = text;
+        this.centered = centered;
+        this.vcentered = vcentered;
     }
 
-    /**
+        /**
      * Метод рисованияв конкретной реализации
      *
      * @param canvas   область рисования
@@ -52,6 +65,12 @@ public class Label extends Panel {
         try (TextLine line = TextLine.make(text, FONT12)) {
             // получаем высоту текста
             int capHeight = (int) FONT12.getMetrics().getCapHeight();
+            // если нужно центрировать по горизонтали
+            if (centered)
+                canvas.translate((windowCS.getSize().x - line.getWidth()) / 2.0f, 0);
+            if (vcentered)
+                canvas.translate(0, (windowCS.getSize().y - capHeight) / 2.0f);
+
             // рисуем текст
             try (Paint fg = new Paint().setColor(LABEL_TEXT_COLOR)) {
                 canvas.drawTextLine(line, 0, capHeight, fg);
