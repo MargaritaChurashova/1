@@ -26,6 +26,10 @@ import static controls.Label.PANEL_PADDING;
  */
 public class Application implements Consumer<Event> {
     /**
+     * Представление проблемы
+     */
+    public static Task task;
+    /**
      * панель легенды
      */
     private final PanelHelp panelHelp;
