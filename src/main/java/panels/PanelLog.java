@@ -15,7 +15,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-
+import static app.Application.PANEL_PADDING;
 import static app.Colors.PANEL_BACKGROUND_COLOR;
 import static app.Fonts.FONT12;
 

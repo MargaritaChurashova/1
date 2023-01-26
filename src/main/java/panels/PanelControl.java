@@ -1,22 +1,21 @@
 package panels;
 
-import controls.Label;
-import io.github.humbleui.jwm.Event;
-import io.github.humbleui.jwm.Window;
+import app.Task;
+import controls.MultiLineLabel;
+import io.github.humbleui.jwm.*;
 import io.github.humbleui.skija.Canvas;
 import misc.CoordinateSystem2i;
 
-import static app.Colors.PANEL_BACKGROUND_COLOR;
-import static controls.Label.PANEL_PADDING;
+import static app.Application.PANEL_PADDING;
 
 /**
  * Панель управления
  */
 public class PanelControl extends GridPanel {
     /**
-     * Заголовок
+     * Текст задания
      */
-    private final Label label;
+    MultiLineLabel task;
 
     /**
      * Панель управления
@@ -38,10 +37,11 @@ public class PanelControl extends GridPanel {
     ) {
         super(window, drawBG, color, padding, gridWidth, gridHeight, gridX, gridY, colspan, rowspan);
 
-        // создаём первый заголовок
-        label = new Label(window, false, PANEL_BACKGROUND_COLOR, PANEL_PADDING,
-                1, 1, 0, 0, 1, 1, "Панель управления", true, true);
-
+        // задание
+        task = new MultiLineLabel(
+                window, false, backgroundColor, PANEL_PADDING,
+                6, 7, 0, 0, 6, 2, Task.TASK_TEXT,
+                false, true);
 
     }
 
@@ -52,7 +52,8 @@ public class PanelControl extends GridPanel {
      */
     @Override
     public void accept(Event e) {
-
+        // вызываем обработчик предка
+        super.accept(e);
     }
 
     /**
@@ -63,6 +64,6 @@ public class PanelControl extends GridPanel {
      */
     @Override
     public void paintImpl(Canvas canvas, CoordinateSystem2i windowCS) {
-        label.paint(canvas, windowCS);
+        task.paint(canvas, windowCS);
     }
 }

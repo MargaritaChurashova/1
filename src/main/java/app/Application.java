@@ -26,6 +26,10 @@ import static controls.Label.PANEL_PADDING;
  */
 public class Application implements Consumer<Event> {
     /**
+     * отступы панелей
+     */
+    public static final int PANEL_PADDING = 5;
+    /**
      * Представление проблемы
      */
     public static Task task;
@@ -167,6 +171,7 @@ public class Application implements Consumer<Event> {
         panelRendering.accept(e);
         panelLog.accept(e);
     }
+
     /**
      * Рисование
      *
